@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Report Generated</title>
+     <style>
+          /* Global Styles */
+          body {
+               font-family: 'Arial', sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: #121212;
+               color: #EAEAEA;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               flex-direction: column;
+          }
+
+          h1 {
+               color: #00B4D8;
+               font-size: 2.5em;
+               margin-bottom: 20px;
+          }
+
+          p {
+               font-size: 1.2em;
+               color: #B0BEC5;
+               margin-bottom: 20px;
+          }
+
+          ul {
+               list-style-type: none;
+               padding: 0;
+          }
+
+          li {
+               margin-bottom: 15px;
+          }
+
+          a {
+               font-size: 1.1em;
+               color: #00B4D8;
+               text-decoration: none;
+               border: 1px solid #00B4D8;
+               padding: 10px 20px;
+               border-radius: 5px;
+               transition: background-color 0.3s ease, color 0.3s ease;
+          }
+
+          a:hover {
+               background-color: #00B4D8;
+               color: #121212;
+          }
+
+          footer {
+               position: absolute;
+               bottom: 10px;
+               font-size: 0.9em;
+               color: #B0BEC5;
+          }
+
+          /* Responsive Design */
+          @media (max-width: 600px) {
+               h1 {
+                    font-size: 2em;
+               }
+
+               p {
+                    font-size: 1em;
+               }
+
+               ul {
+                    padding-left: 20px;
+               }
+
+               li {
+                    margin-bottom: 10px;
+               }
+          }
+     </style>
+</head>
+<body>
+     <h1>Reports Generated Successfully!</h1>
+     <p>Your data report is ready. You can download the following:</p>
+     <ul>
+          <li><a href="/download/{{ html_report.split('/')[-1] }}" download>Download HTML Report</a></li>
+          <li><a href="/download/{{ json_report.split('/')[-1] }}" download>Download JSON Report</a></li>
+     </ul>
+     <footer>
+          <p>&copy; 2025 Data Analysis. All Rights Reserved.</p>
+     </footer>
+</body>
+</html>

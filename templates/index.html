@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Upload CSV File</title>
+     <style>
+          /* Global Styles */
+          body {
+               font-family: 'Arial', sans-serif;
+               margin: 0;
+               padding: 0;
+               background-color: #121212;
+               color: #EAEAEA;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+               flex-direction: column;
+          }
+
+          h1 {
+               color: #00B4D8;
+               font-size: 2.5em;
+               margin-bottom: 20px;
+          }
+
+          .container {
+               background-color: #1F1F1F;
+               padding: 30px;
+               border-radius: 10px;
+               box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+               width: 100%;
+               max-width: 400px;
+          }
+
+          label {
+               font-size: 1.2em;
+               color: #B0BEC5;
+               margin-bottom: 10px;
+               display: block;
+          }
+
+          input[type="file"] {
+               width: 100%;
+               padding: 10px;
+               border-radius: 5px;
+               background-color: #333;
+               border: 1px solid #444;
+               color: #EAEAEA;
+               font-size: 1em;
+               margin-bottom: 20px;
+               transition: background-color 0.3s ease;
+          }
+
+          input[type="file"]:hover {
+               background-color: #444;
+          }
+
+          button {
+               width: 100%;
+               padding: 15px;
+               background-color: #00B4D8;
+               border: none;
+               border-radius: 5px;
+               color: #fff;
+               font-size: 1.1em;
+               cursor: pointer;
+               transition: background-color 0.3s ease;
+          }
+
+          button:hover {
+               background-color: #008C99;
+          }
+
+          footer {
+               position: absolute;
+               bottom: 10px;
+               font-size: 0.9em;
+               color: #B0BEC5;
+          }
+
+          /* Responsive Design */
+          @media (max-width: 600px) {
+               h1 {
+                    font-size: 2em;
+               }
+
+               .container {
+                    width: 90%;
+                    padding: 20px;
+               }
+          }
+     </style>
+</head>
+<body>
+     <h1>Upload CSV File for Data Report</h1>
+     <div class="container">
+          <form action="/upload" method="post" enctype="multipart/form-data">
+               <label for="csv_file">Select CSV File:</label>
+               <input type="file" name="csv_file" id="csv_file" required><br><br>
+               <button type="submit">Upload</button>
+          </form>
+     </div>
+     <footer>
+          <p>&copy; 2025 Data Analysis. All Rights Reserved.</p>
+     </footer>
+</body>
+</html>
